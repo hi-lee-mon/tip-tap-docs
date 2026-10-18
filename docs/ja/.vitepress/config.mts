@@ -25,6 +25,8 @@ const readTitle = (relPath: string) =>
   readFileSync(join(root, relPath), 'utf8').split('\n')[0].replace(/^#\s*/, '')
 
 export default defineConfig({
+  // GitHub Pages ではリポジトリ名のパスの下に公開される
+  base: '/tip-tap-docs/',
   lang: 'ja',
   title: 'Tiptap ドキュメント 日本語訳',
   description: 'Tiptap 公式ドキュメント（Editor・Guides）の日本語訳',

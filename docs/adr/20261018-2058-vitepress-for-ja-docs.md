@@ -16,6 +16,14 @@ VitePress 1.6.4（安定版）を使う。`pnpm docs:dev` で手元に開発サ�
 - 名前に `key` / `token` を含む未翻訳の4ページは、サイトの対象から外し、サイドバーでは公式サイトの原文へリンクする
 - pnpm が承認を求めた esbuild のインストール時スクリプトは許可しない（`pnpm-workspace.yaml` の `allowBuilds`）。本体のバイナリは別パッケージで入るため、スクリプトなしで動く
 
+### 追記: GitHub Pages で公開する
+
+手元で起動しなくても読めるように、GitHub Pages で公開する（https://hi-lee-mon.github.io/tip-tap-docs/）。
+
+- main への push を合図に、GitHub Actions がテスト・ビルド・公開までを行う（`.github/workflows/deploy-docs.yml`）
+- 公開先はリポジトリ名の下になるため、VitePress の `base` を `/tip-tap-docs/` にした。手元の開発サーバーも同じパスで開く
+- CI でも同じ pnpm を使うため、`package.json` の `packageManager` で版を固定した
+
 ## 採らなかった案
 
 - **GitHub の表示だけで読む**: ビルドは不要だが、サイドバーと全文検索がない

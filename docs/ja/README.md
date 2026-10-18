@@ -9,7 +9,11 @@
 
 ## サイトとして読む
 
-リポジトリのルートで次を実行し、表示された URL（`http://localhost:5173` など）をブラウザで開きます。
+公開版: https://hi-lee-mon.github.io/tip-tap-docs/
+
+main に push すると、GitHub Actions が自動でビルドして公開し直します（`.github/workflows/deploy-docs.yml`）。
+
+手元で読むときは、リポジトリのルートで次を実行し、表示された URL（`http://localhost:5173/tip-tap-docs/` など）をブラウザで開きます。
 
 ```bash
 pnpm install
