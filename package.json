@@ -1,0 +1,14 @@
+{
+  "name": "tip-tap-docs",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "docs:dev": "vitepress dev docs/ja",
+    "docs:build": "vitepress build docs/ja",
+    "docs:preview": "vitepress preview docs/ja",
+    "test": "node --test tools/mdx-to-md/*.test.mjs docs/ja/.vitepress/*.test.mjs"
+  },
+  "devDependencies": {
+    "vitepress": "1.6.4"
+  }
+}
